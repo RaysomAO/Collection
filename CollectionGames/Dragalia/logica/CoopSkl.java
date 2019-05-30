@@ -1,6 +1,11 @@
 package logica;
 
-public class CoopSkl extends Skills {
+import java.io.Serializable;
+
+public class CoopSkl extends Skills implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	private static int Offense = 10;
 	private static int Healing = 20;
 	private static int Other = 15;

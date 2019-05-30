@@ -1,8 +1,11 @@
 package logica;
 
 import java.awt.Image;
+import java.io.Serializable;
 
-public class Adventurer extends Trainable{
+public class Adventurer extends Trainable implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	String Element;
 	String Weapon;

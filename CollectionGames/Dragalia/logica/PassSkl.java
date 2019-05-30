@@ -1,6 +1,10 @@
 package logica;
 
-public class PassSkl extends Skills {
+import java.io.Serializable;
+
+public class PassSkl extends Skills implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	int Value;
 	int MaxValue;

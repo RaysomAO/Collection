@@ -1,6 +1,10 @@
 package logica;
 
-public class DmgSkl extends Skills {
+import java.io.Serializable;
+
+public class DmgSkl extends Skills implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	String DescriptionLvl2;
 	String DescriptionLvl3;

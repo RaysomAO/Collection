@@ -1,6 +1,10 @@
 package logica;
 
-public abstract class Trainable {
+import java.io.Serializable;
+
+public abstract class Trainable implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	String Name;
 	int Star;
