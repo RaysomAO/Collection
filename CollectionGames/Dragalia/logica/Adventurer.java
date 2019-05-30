@@ -22,6 +22,7 @@ public class Adventurer extends Trainable implements Serializable{
 	Image FullBody;
 	Image UnbindFullBody2;
 	Image UnbindFullBody3;
+	
 	public String getElement() {
 		return Element;
 	}

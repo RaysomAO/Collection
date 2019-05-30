@@ -26,4 +26,58 @@ public class ManejadorDeColeccion implements Serializable{
         return Instance;		
 	}
 
+	//--------------------------------------------Sets y gets---------------------------------------------------//
+	
+	public ArrayList<Equipo> getEquipos() {
+		return Equipos;
+	}
+
+	public void setEquipos(ArrayList<Equipo> equipos) {
+		Equipos = equipos;
+	}
+
+	public ArrayList<Adventurer> getPersonajes() {
+		return Personajes;
+	}
+
+	public void setPersonajes(ArrayList<Adventurer> personajes) {
+		Personajes = personajes;
+	}
+
+	public ArrayList<Dragon> getDragones() {
+		return Dragones;
+	}
+
+	public void setDragones(ArrayList<Dragon> dragones) {
+		Dragones = dragones;
+	}
+
+	public ArrayList<Wyrmprint> getColeccion() {
+		return Coleccion;
+	}
+
+	public void setColeccion(ArrayList<Wyrmprint> coleccion) {
+		Coleccion = coleccion;
+	}
+//------------------------------------------Funciones principales--------------------------------------------
+	
+	public void NewTrainable(Trainable Nuevo) {
+		for (Trainable Alpha : Personajes) {
+		if(Nuevo instanceof Adventurer && !((Adventurer) Nuevo).getName().equalsIgnoreCase(((Adventurer) Alpha).getName())
+				&&((Adventurer) Nuevo).getWeapon().equalsIgnoreCase(((Adventurer) Alpha).getWeapon()) 
+				&&((Adventurer) Nuevo).getElement().equalsIgnoreCase(((Adventurer) Alpha).getElement()))
+				this.Personajes.add(Nuevo);
+				System.out.println("Nuevo personaje agregado");
+			
+		else if(this.Personajes.contains(Nuevo)) 
+			System.out.println("Personaje ya existe");
+		else 
+			System.out.println("Error inesperado :,( ");
+		}
+	}
+	
+	private boolean ExisteTrainable(Trainable Nuevo) {
+		return false;
+	}
+	
 }
