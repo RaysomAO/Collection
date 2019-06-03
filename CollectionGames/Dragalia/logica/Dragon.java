@@ -7,6 +7,8 @@ public class Dragon extends Trainable implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	private static int DragonNumber = 10000;
+	int code;
 	String Element;
 	String Description;
 	DmgSkl Main;
@@ -17,6 +19,20 @@ public class Dragon extends Trainable implements Serializable{
 	Image Icon;
 	Image FullBody;
 	int StatueBuff;
+	
+	
+	public static int getDragonNumber() {
+		return DragonNumber;
+	}
+	public static void AddDragon() {
+		DragonNumber++;
+	}
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
 	public String getElement() {
 		return Element;
 	}

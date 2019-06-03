@@ -6,7 +6,9 @@ import java.io.Serializable;
 public class Wyrmprint extends Trainable implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
-		
+	
+	private static int PrintNumber = 10000;
+	int code;
 	int Unbind;
 	String Description1;
 	String Description2;
@@ -22,8 +24,22 @@ public class Wyrmprint extends Trainable implements Serializable{
 	Image UnbindIcon;
 	Image UnbindFullBody;
 	//Grow always get round up after level 55
+	
+	
 	public int getUnbind() {
 		return Unbind;
+	}
+	public static int getPrintNumber() {
+		return PrintNumber;
+	}
+	public static void AddPrint() {
+		PrintNumber++;
+	}
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
 	}
 	public void setUnbind(int unbind) {
 		Unbind = unbind;

@@ -7,7 +7,9 @@ public class Weapon extends Trainable implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	String Type;
+	private static int WeaponNumber = 10000;
+	int code;
+	String WeaponType;
 	String Element;
 	String Description;
 	DmgSkl Main;
@@ -17,11 +19,26 @@ public class Weapon extends Trainable implements Serializable{
 	PassSkl Fouth;
 	Image Icon;
 	Image FullBody;
-	public String getType() {
-		return Type;
+	
+	
+	
+	public static int getWeaponNumber() {
+		return WeaponNumber;
 	}
-	public void setType(String type) {
-		Type = type;
+	public static void AddWeapon() {
+		WeaponNumber++;
+	}
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
+	public String getWeaponType() {
+		return WeaponType;
+	}
+	public void setWeaponType(String weaponType) {
+		WeaponType = weaponType;
 	}
 	public String getElement() {
 		return Element;

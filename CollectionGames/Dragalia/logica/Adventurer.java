@@ -7,6 +7,8 @@ public class Adventurer extends Trainable implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	private static int AdventurerNumber = 10000;
+	int code;
 	String Element;
 	String Weapon;
 	String Description;
@@ -23,6 +25,19 @@ public class Adventurer extends Trainable implements Serializable{
 	Image UnbindFullBody2;
 	Image UnbindFullBody3;
 	
+	
+	public static int getAdventurerNumber() {
+		return AdventurerNumber;
+	}
+	public static void AddAdventurer() {
+		AdventurerNumber++;
+	}
+	public int getCode() {
+		return code;
+	}
+	public void setCode(int code) {
+		this.code = code;
+	}
 	public String getElement() {
 		return Element;
 	}

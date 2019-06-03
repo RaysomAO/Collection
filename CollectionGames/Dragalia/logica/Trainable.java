@@ -18,6 +18,14 @@ public abstract class Trainable implements Serializable{
 	int Exp;
 	int TotalExp;
 	int Maxexp;//Update all ecuations
+	int Might;
+	
+	public int getMight() {
+		return Might;
+	}
+	public void setMight(int might) {
+		Might = might;
+	}
 	public String getName() {
 		return Name;
 	}
