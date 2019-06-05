@@ -11,6 +11,7 @@ public class ManejadorDeColeccion implements Serializable{
 	private ArrayList<Adventurer> Personajes = new ArrayList<Adventurer>();
 	private ArrayList<Dragon> Dragones = new ArrayList<Dragon>();
 	private ArrayList<Wyrmprint> Coleccion = new ArrayList<Wyrmprint>();
+	private ArrayList<Weapon> Armas = new ArrayList<Weapon>();
 	private static ManejadorDeColeccion Instance = null;
 	
 	private ManejadorDeColeccion() {
@@ -18,6 +19,7 @@ public class ManejadorDeColeccion implements Serializable{
 		this.Personajes = new ArrayList<>();
 		this.Dragones = new ArrayList<>();
 		this.Coleccion = new ArrayList<>();
+		this.Armas = new ArrayList<>();
 	}
 	
 	public static ManejadorDeColeccion GetManejadorDeColecion () {
@@ -61,17 +63,38 @@ public class ManejadorDeColeccion implements Serializable{
 	}
 //------------------------------------------Funciones principales--------------------------------------------
 	
-	public void NewTrainable(Trainable Nuevo) {////CHEQUEAR ESTE CODIGO NO SE SIENTE BIEEEEN!!!!!!
-		int NoExiste= 1;
-		for (Trainable Alpha : Personajes) {
-			NoExiste = ExisteTrainable(Nuevo, Alpha);
-		if(NoExiste == 1)
-			System.out.println("Personaje "+ Nuevo.getName() +" ya existe");
-		else {
-			this.Personajes.add((Adventurer) Nuevo);
-			System.out.println("Nuevo personaje agregado");
+	public void NewTrainable(Trainable Nuevo) {////CHEQUEAR ESTE CODIGO TODAVIA NO SE SIENTE BIEEEEN!!!!!!
+		
+		if(ChequearInstanciaTrain(Nuevo) == 1)
+			for (Trainable Alpha : Personajes) {
+				if(ExisteTrainable(Nuevo,Alpha) == 1)
+					System.out.println("El personaje: '"+ Alpha.getName()+"',ya existe");
+				else
+					this.getPersonajes().add((Adventurer)Nuevo);
 			}
-		}
+		else if(ChequearInstanciaTrain(Nuevo) == 2)
+			for (Trainable Alpha : Dragones) {
+				if(ExisteTrainable(Nuevo,Alpha) == 2)
+					System.out.println("El personaje: '"+ Alpha.getName()+"',ya existe");
+				else
+					this.getPersonajes().add((Adventurer)Nuevo);
+			}
+		else if(ChequearInstanciaTrain(Nuevo) == 3)
+			for (Trainable Alpha : Armas) {
+				if(ExisteTrainable(Nuevo,Alpha) == 3)
+					System.out.println("El personaje: '"+ Alpha.getName()+"',ya existe");
+				else
+					this.getPersonajes().add((Adventurer)Nuevo);
+			}
+		else if(ChequearInstanciaTrain(Nuevo) == 4)
+			for (Trainable Alpha : Coleccion) {
+				if(ExisteTrainable(Nuevo,Alpha) == 4)
+					System.out.println("El personaje: '"+ Alpha.getName()+"',ya existe");
+				else
+					this.getPersonajes().add((Adventurer)Nuevo);
+			}
+		else
+			System.out.println("No es un elemento entrenable");
 	}
 	
 	private int ExisteTrainable(Trainable Nuevo, Trainable Alpha) {//Check for existences of a trainable class
