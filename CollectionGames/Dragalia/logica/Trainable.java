@@ -12,14 +12,27 @@ public abstract class Trainable implements Serializable{
 	int BaseHP;
 	int MaxHp;
 	int BaseStrg;
-	int MaxStrg;
-	int GrowHp;//After 55 Round up update getter
-	int GrowStrg;
+	int MaxStrg;//After 55 Round up update getter
+	int Hp;
+	int Strg;
 	int Exp;
 	int TotalExp;
 	int Maxexp;//Update all ecuations
 	int Might;
 	
+	
+	public int getHp() {
+		return Hp;
+	}
+	public void setHp() {
+		Hp = (this.MaxHp-this.BaseHP)*this.Level+ this.BaseHP;
+	}
+	public int getStrg() {
+		return Strg;
+	}
+	public void setStrg() {
+		Strg = (this.MaxStrg-this.BaseStrg)*this.Level+ this.BaseStrg;
+	}
 	public int getMight() {
 		return Might;
 	}
@@ -67,18 +80,6 @@ public abstract class Trainable implements Serializable{
 	}
 	public void setMaxStrg(int maxStrg) {
 		MaxStrg = maxStrg;
-	}
-	public int getGrowHp() {
-		return GrowHp;
-	}
-	public void setGrowHp(int growHp) {
-		GrowHp = growHp;
-	}
-	public int getGrowStrg() {
-		return GrowStrg;
-	}
-	public void setGrowStrg(int growStrg) {
-		GrowStrg = growStrg;
 	}
 	public int getExp() {
 		return Exp;

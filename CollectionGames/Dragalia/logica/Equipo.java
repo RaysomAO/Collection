@@ -14,7 +14,15 @@ public class Equipo implements Serializable{
 	String LeaderElement;
 	int TotalStrg;
 	String PasivesAbilities;
+	int HiddenMight;
 	
+	
+	public int getHiddenMight() {
+		return HiddenMight;
+	}
+	public void setHiddenMight(int hiddenMight) {
+		HiddenMight = hiddenMight;
+	}
 	public Adventurer getPersonaje1() {
 		return Personaje1;
 	}

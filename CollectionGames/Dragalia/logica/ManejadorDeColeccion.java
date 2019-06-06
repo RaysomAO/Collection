@@ -127,4 +127,7 @@ public class ManejadorDeColeccion implements Serializable{
 		return 0;
 	}
 	
+	private ArrayList<Trainable> ListaBuscados(String elemento){
+		return null;
+	}
 }
