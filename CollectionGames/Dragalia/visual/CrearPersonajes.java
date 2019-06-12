@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+<<<<<<< HEAD
 import java.awt.Panel;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -49,6 +50,35 @@ public class CrearPersonajes extends JDialog {
 				panel.add(lblNombre);
 			}
 		}
+=======
+
+public class CrearPersonajes extends JDialog {
+
+	private final JPanel contentPanel = new JPanel();
+
+	/**
+	 * Launch the application..
+	 */
+	public static void main(String[] args) {
+		try {
+			CrearPersonajes dialog = new CrearPersonajes();
+			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+			dialog.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Create the dialog.
+	 */
+	public CrearPersonajes() {
+		setBounds(100, 100, 450, 300);
+		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setLayout(new FlowLayout());
+		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
+		getContentPane().add(contentPanel, BorderLayout.CENTER);
+>>>>>>> branch 'master' of https://github.com/RaysomAO/Collection.git
 		{
 			JPanel buttonPane = new JPanel();
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
