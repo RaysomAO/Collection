@@ -29,7 +29,7 @@ public class CrearPersonajes extends JDialog {
 	}
 
 	/**
-	 * Create the dialog..
+	 * Create the dialog...
 	 */
 	public CrearPersonajes() {
 		setTitle("Nuevos Personajes");
